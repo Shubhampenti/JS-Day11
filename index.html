@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .resume-section {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function createElement(tag, text = '', className = '') {
+            const element = document.createElement(tag);
+            if (text) element.textContent = text;
+            if (className) element.classList.add(className);
+            return element;
+        }
+
+        const root = document.createElement('div');
+        document.body.appendChild(root);
+
+        const header = document.createElement('div');
+        header.classList.add('resume-section');
+        root.appendChild(header);
+
+        const name = createElement('h1', 'Shubham Penti');
+        const contactInfo = createElement('p', 'Email: shubhampenti@gmail.com | Phone: 123-456-789');
+        header.appendChild(name);
+        header.appendChild(contactInfo);
+
+        const educationSection = document.createElement('div');
+        educationSection.classList.add('resume-section');
+        root.appendChild(educationSection);
+
+        const educationTitle = createElement('h2', 'Education');
+        educationSection.appendChild(educationTitle);
+
+        const educationList = document.createElement('ul');
+        educationSection.appendChild(educationList);
+
+        const educationItem1 = createElement('li', 'Bachelor of Technology in Information Technology');
+        const educationItem2 = createElement('li', 'High School - Walchand College of Arts & Science');
+        educationList.appendChild(educationItem1);
+        educationList.appendChild(educationItem2);
+
+        const skillsSection = document.createElement('div');
+        skillsSection.classList.add('resume-section');
+        root.appendChild(skillsSection);
+
+        const skillsTitle = createElement('h2', 'Skills');
+        skillsSection.appendChild(skillsTitle);
+
+        const skillsList = document.createElement('ul');
+        skillsSection.appendChild(skillsList);
+
+        const skills = ['JavaScript', 'HTML', 'CSS', 'React', 'Node.js', 'Python'];
+        skills.forEach(skill => {
+            const skillItem = createElement('li', skill);
+            skillsList.appendChild(skillItem);
+        });
+
+        const experienceSection = document.createElement('div');
+        experienceSection.classList.add('resume-section');
+        root.appendChild(experienceSection);
+
+        const experienceTitle = createElement('h2', 'Experience');
+        experienceSection.appendChild(experienceTitle);
+
+        const experienceList = document.createElement('ul');
+        experienceSection.appendChild(experienceList);
+
+        const experienceItem1 = createElement('li', 'Frontend Developer');
+        const experienceItem2 = createElement('li', 'Web Development Intern at Exposys Data Labs');
+        experienceList.appendChild(experienceItem1);
+        experienceList.appendChild(experienceItem2);
+
+    </script>
+
+</body>
+</html>
